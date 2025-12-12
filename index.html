@@ -23,6 +23,41 @@
   border-radius: 12px;
 }
 
+.christmas-lights {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 14px;
+  z-index: 10;
+}
+
+.christmas-lights span {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: red;
+  box-shadow: 0 0 8px currentColor;
+  animation: blink 1.6s infinite;
+}
+
+
+.christmas-lights span:nth-child(4n+1) { background: #ff4d4d; }
+.christmas-lights span:nth-child(4n+2) { background: #ffd93d; }
+.christmas-lights span:nth-child(4n+3) { background: #4dd599; }
+.christmas-lights span:nth-child(4n)   { background: #4d96ff; }
+
+
+.christmas-lights span:nth-child(odd) {
+  animation-delay: 0.8s;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
 
 .badge {
   position: absolute;
@@ -525,6 +560,18 @@
 
 <body>
   <header>
+    <div class="christmas-lights">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
     <img src="comlogo.png" alt="Candle Logo" style="height:200px; width:auto; margin-right:12px;">
     <h1>Handcrafted Christmas Gifts</h1>
     <p>

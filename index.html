@@ -22,7 +22,7 @@
   width: 100%;
   border-radius: 12px;
 }
-
+/*
 .christmas-lights {
   position: absolute;
   top: 16px;
@@ -52,6 +52,66 @@
 .christmas-lights span:nth-child(odd) {
   animation-delay: 0.8s;
 }
+*/
+/* ===== Valentine Heart Lights ===== */
+.valentine-lights{
+  position:absolute;
+  top:14px;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  gap:12px;
+  z-index:10;
+  align-items:center;
+  pointer-events:none;
+}
+
+.valentine-lights span{
+  width:18px;
+  height:18px;
+  position:relative;
+  transform: rotate(-45deg);
+  border-radius: 4px;
+  background: #ff4d6d;
+  box-shadow: 0 0 10px rgba(255, 77, 109, 0.75);
+  animation: heartBlink 1.6s infinite ease-in-out;
+}
+
+/* two circles to form the heart */
+.valentine-lights span::before,
+.valentine-lights span::after{
+  content:"";
+  position:absolute;
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  background: inherit;
+}
+
+.valentine-lights span::before{
+  top:-9px;
+  left:0;
+}
+.valentine-lights span::after{
+  left:9px;
+  top:0;
+}
+
+/* color cycle */
+.valentine-lights span:nth-child(4n+1){ background:#ff4d6d; box-shadow:0 0 10px rgba(255,77,109,.75); }
+.valentine-lights span:nth-child(4n+2){ background:#ff85a1; box-shadow:0 0 10px rgba(255,133,161,.70); }
+.valentine-lights span:nth-child(4n+3){ background:#ffb3c6; box-shadow:0 0 10px rgba(255,179,198,.65); }
+.valentine-lights span:nth-child(4n){   background:#ffd1dc; box-shadow:0 0 10px rgba(255,209,220,.60); }
+
+/* staggered blinking */
+.valentine-lights span:nth-child(odd){ animation-delay: .8s; }
+
+@keyframes heartBlink{
+  0%, 100%{ opacity:.45; transform:rotate(-45deg) scale(.95); filter:saturate(1); }
+  50%{ opacity:1; transform:rotate(-45deg) scale(1.08); filter:saturate(1.2); }
+}
+
+
 
 @keyframes blink {
   0%, 100% { opacity: 0.4; }
@@ -560,7 +620,7 @@
 
 <body>
   <header>
-    <div class="christmas-lights">
+    <div class="valentine-lights">
     <span></span><span></span><span></span><span></span><span></span>
     <span></span><span></span><span></span><span></span><span></span>
     <span></span><span></span><span></span><span></span><span></span>

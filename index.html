@@ -6,13 +6,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Handcrafted Christmas Gifts</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #fff9f6;
-      color: #333;
-      background-image: url('https://www.transparenttextures.com/patterns/snow.png');
-    }
+body{
+  background:
+    radial-gradient(circle at 20% 10%, rgba(255,215,0,.10), transparent 40%),
+    radial-gradient(circle at 80% 30%, rgba(255,215,0,.08), transparent 45%),
+    linear-gradient(180deg, #fff7f1 0%, #fffaf7 60%, #fff7f1 100%);
+  color:#2a2a2a;
+}
+
+.cny-garland{
+  position:absolute; top:12px; left:50%;
+  transform:translateX(-50%);
+  display:flex; gap:10px;
+  z-index:10;
+  opacity:.9;
+  pointer-events:none;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,.15));
+}
+.cny-garland span{
+  font-size:18px;
+  animation: lanternGlow 1.8s infinite ease-in-out;
+}
+.cny-garland span:nth-child(odd){ animation-delay:.9s; }
+
+@keyframes lanternGlow{
+  0%,100%{ transform: translateY(0) scale(.96); opacity:.75; }
+  50%{ transform: translateY(-2px) scale(1.06); opacity:1; }
+}
+
 .image-wrapper {
   position: relative;
   display: inline-block;
@@ -620,18 +641,16 @@
 
 <body>
   <header>
-    <div class="valentine-lights">
-    <span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span><span></span>
-  </div>
+<div class="cny-garland" aria-hidden="true">
+  <span>🏮</span><span>🏮</span><span>🏮</span><span>🏮</span><span>🏮</span>
+  <span>🏮</span><span>🏮</span><span>🏮</span><span>🏮</span><span>🏮</span>
+    <span>🏮</span><span>🏮</span><span>🏮</span><span>🏮</span><span>🏮</span>
+  <span>🏮</span><span>🏮</span><span>🏮</span><span>🏮</span><span>🏮</span>
+    <span>🏮</span><span>🏮</span><span>🏮</span><span>🏮</span><span>🏮</span>
+  <span>🏮</span><span>🏮</span><span>🏮</span><span>🏮</span><span>🏮</span>
+    <span>🏮</span><span>🏮</span><span>🏮</span><span>🏮</span><span>🏮</span>
+  <span>🏮</span><span>🏮</span><span>🏮</span><span>🏮</span><span>🏮</span>
+</div>
     <img src="comlogo.png" alt="Candle Logo" style="height:200px; width:auto; margin-right:12px;">
     <h1>Handcrafted Gifts</h1>
     <p>
@@ -640,6 +659,116 @@
   </header>
 
   <section class="products">
+<div class="product">
+
+  <!-- Image Gallery -->
+  <div class="image-gallery">
+    <img src="fortune_soap_00.jpg" alt="Fortune Essential Oil Soap" class="active" />
+    <button class="prev">❮</button>
+    <button class="next">❯</button>
+  </div>
+
+  <h3>Fortune “招财进宝” Essential Oil Soap</h3>
+
+  <p><strong>Code:</strong> S30</p>
+
+  <p>
+    Gentle cleansing · gift-ready · perfect for Lunar New Year & holiday sets.<br>
+    <em>Scents:</em> Wild Orange, Clove, Cinnamon Leaf, Cinnamon Bark, Eucalyptus, Rosemary.
+  </p>
+
+  <p class="price">💲<strong>9.99 CAD</strong> each</p>
+
+  <!-- Color Options -->
+  <div class="color-options">
+    <span class="color-btn color-yellow" data-color="Yellow" aria-label="Yellow" title="Yellow"></span>
+    <span class="color-btn color-red" data-color="Red" aria-label="Red" title="Red"></span>
+    <span class="color-btn color-random" data-color="Random" title="Random (Surprise Color)"></span>
+  </div>
+
+  <p class="color-warning">
+    Please select a color before pre-ordering.
+  </p>
+
+  <!-- Preorder Button -->
+  <a href="#preorder" class="order-btn" data-code="S30" product="Soap">Pre-Order Now</a>
+
+</div>
+
+<div class="product">
+
+  <!-- Image Gallery -->
+  <div class="image-gallery">
+    <img src="fortune_horse_00.jpg" alt="Lucky Horse Essential Oil Soap" class="active" />
+    <!-- <img src="fortune_horse_01.jpg" alt="Lucky Horse Essential Oil Soap - angle 2" /> -->
+
+    <button class="prev">❮</button>
+    <button class="next">❯</button>
+  </div>
+
+  <h3>Lucky Fortune Horse Essential Oil Soap</h3>
+
+  <p><strong>Code:</strong> S31</p>
+
+  <p>
+    Gentle cleansing · festive design · perfect for gifting or holiday sets.<br>
+    <em>Scents:</em> Wild Orange, Clove, Cinnamon Leaf, Cinnamon Bark, Eucalyptus, Rosemary.
+  </p>
+
+  <p class="price">💲<strong>9.99 CAD</strong> each</p>
+
+  <!-- Color Options -->
+  <div class="color-options">
+    <span class="color-btn color-red" data-color="Red" aria-label="Red" title="Red"></span>
+    <span class="color-btn color-yellow" data-color="Yellow" aria-label="Yellow" title="Yellow"></span>
+    <span class="color-btn color-random" data-color="Random" title="Random (Surprise Color)"></span>
+  </div>
+
+  <p class="color-warning">
+    Please select a color before pre-ordering.
+  </p>
+
+  <!-- Preorder Button -->
+  <a href="#preorder" class="order-btn" data-code="S31" product="Soap">Pre-Order Now</a>
+
+</div>
+
+<div class="product">
+
+  <!-- Image Gallery -->
+  <div class="image-gallery">
+    <img src="loofah_sculpt_00.jpg" alt="Loofah Sculpting Exfoliating Soap" class="active" />
+    <img src="loofah_sculpt_01.jpg" alt="Loofah Sculpting Exfoliating Soap - detail" />
+
+    <button class="prev">❮</button>
+    <button class="next">❯</button>
+  </div>
+
+  <h3>Loofah Sculpting Exfoliating Soap</h3>
+
+  <p><strong>Code:</strong> S32</p>
+
+  <p>
+
+    <em>Key blend:</em> Slim & Light Blend + Grapefruit Essential Oil.<br>
+    <em>Benefits:</em> deep exfoliation · smoother skin · refreshing citrus aroma.
+  </p>
+
+  <p class="price">💲<strong>9.99 CAD</strong> each</p>
+
+  <!-- Color / Style Options -->
+  <div class="color-options">
+    <span class="color-btn color-random" data-color="Random" title="Random (Surprise Color)"></span>
+  </div>
+
+  <p class="color-warning">
+    Please select a color before pre-ordering.
+  </p>
+
+  <!-- Preorder Button -->
+  <a href="#preorder" class="order-btn" data-code="S32" product="Soap">Pre-Order Now</a>
+
+</div>
 
     <div class="product">
        <div class="image-gallery">
@@ -798,6 +927,9 @@
   <a href="#preorder" class="order-btn" data-code="S02" product="Soap">Pre-Order Now</a>
 
 </div>
+
+
+
 
 <div class="product">
 
